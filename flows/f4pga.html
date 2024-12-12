@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>In F4PGA &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Glossary" href="../glossary.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -471,14 +466,14 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="in-f4pga">
-<h1 id="flows-f4pga--page-root">In F4PGA<a class="headerlink" href="#flows-f4pga--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="flows-f4pga--page-root">In F4PGA<a class="headerlink" href="#flows-f4pga--page-root" title="Link to this heading">¶</a></h1>
 <section id="synthesis">
-<h2 id="synthesis">Synthesis<a class="headerlink" href="#synthesis" title="Permalink to this heading">¶</a></h2>
+<h2 id="synthesis">Synthesis<a class="headerlink" href="#synthesis" title="Link to this heading">¶</a></h2>
 <p>In the F4PGA toolchain synthesis is made with the use of Yosys, that is able to perform all the mentioned steps and
 convert HDL to netlist description.
 The result of these steps is written to a file in <code class="docutils literal notranslate"><span class="pre">.eblif</span></code> format.</p>
 <section id="yosys">
-<span id="flows-f4pga-yosys"></span><h3 id="yosys">Yosys<a class="headerlink" href="#yosys" title="Permalink to this heading">¶</a></h3>
+<span id="flows-f4pga-yosys"></span><h3 id="yosys">Yosys<a class="headerlink" href="#yosys" title="Link to this heading">¶</a></h3>
 <p>Yosys is a Free and Open Source Verilog HDL synthesis tool.
 It was designed to be highly extensible and multiplatform.
 In F4PGA toolchain, it is responsible for the whole synthesis process described in <a class="reference external" href="./design-flow.html">FPGA Design Flow</a></p>
@@ -486,7 +481,7 @@ In F4PGA toolchain, it is responsible for the whole synthesis process described 
 Nevertheless, the following description, should provide sufficient introduction to Yosys usage inside the project.
 It is also a good starting point for a deeper understanding of the whole toolchain.</p>
 <section id="short-description">
-<h4 id="short-description">Short description<a class="headerlink" href="#short-description" title="Permalink to this heading">¶</a></h4>
+<h4 id="short-description">Short description<a class="headerlink" href="#short-description" title="Link to this heading">¶</a></h4>
 <p>Yosys consists of several subsystems. Most distinguishable are the first and last ones used in the synthesis process,
 called <em>frontend</em> and <em>backend</em> respectively.
 Intermediate subsystems are called <em>passes</em>.</p>
@@ -505,7 +500,7 @@ standardized formats.
 F4PGA uses <code class="docutils literal notranslate"><span class="pre">.eblif</span></code> as its output file format.</p>
 </section>
 <section id="usage-in-toolchain">
-<h4 id="usage-in-toolchain">Usage in Toolchain<a class="headerlink" href="#usage-in-toolchain" title="Permalink to this heading">¶</a></h4>
+<h4 id="usage-in-toolchain">Usage in Toolchain<a class="headerlink" href="#usage-in-toolchain" title="Link to this heading">¶</a></h4>
 <p>All operations performed by Yosys are written  in <code class="docutils literal notranslate"><span class="pre">.tcl</span></code> script. Commands used
 in the scripts are responsible for preparing output file to match with the
 expectations of other toolchain tools.
@@ -526,12 +521,12 @@ An example configuration script can be found below:</p>
 <p>It can be seen that this script performs a platform-specific process of synthesis, some optimization steps (<code class="docutils literal notranslate"><span class="pre">opt_</span></code>
 commands), and writes the final file in <code class="docutils literal notranslate"><span class="pre">.eblif</span></code> and Verilog formats.
 Yosys synthesis configuration scripts are platform-specific and can by found in <code class="docutils literal notranslate"><span class="pre">&lt;platform-dir&gt;/yosys/synth.tcl</span></code> in
-the <a class="reference external" href="https://github.com/SymbiFlow/f4pga-arch-defs">F4PGA Architecture Definitions</a> repository.</p>
+the <a class="extlink-gh reference external" href="https://github.com/SymbiFlow/f4pga-arch-defs">F4PGA Architecture Definitions</a> repository.</p>
 <p>To understand performed operations, view the log file.
 It is usually generated in the project build directory. It should be named <code class="docutils literal notranslate"><span class="pre">top.eblif.log</span></code>.</p>
 </section>
 <section id="output-analysis">
-<h4 id="output-analysis">Output analysis<a class="headerlink" href="#output-analysis" title="Permalink to this heading">¶</a></h4>
+<h4 id="output-analysis">Output analysis<a class="headerlink" href="#output-analysis" title="Link to this heading">¶</a></h4>
 <p>Input file:</p>
 <div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="k">input</span><span class="w">  </span><span class="n">clk</span><span class="p">,</span>
@@ -581,7 +576,7 @@ chosen platform:</p>
 <p>The same structure is described by the <code class="docutils literal notranslate"><span class="pre">.eblif</span></code> file.</p>
 </section>
 <section id="technology-mapping-in-f4pga-toolchain">
-<h4 id="technology-mapping-in-f4pga-toolchain">Technology mapping in F4PGA toolchain<a class="headerlink" href="#technology-mapping-in-f4pga-toolchain" title="Permalink to this heading">¶</a></h4>
+<h4 id="technology-mapping-in-f4pga-toolchain">Technology mapping in F4PGA toolchain<a class="headerlink" href="#technology-mapping-in-f4pga-toolchain" title="Link to this heading">¶</a></h4>
 <p>It is important to understand the connection between the synthesis and
 implementation tools used in the F4PGA toolchain. As mentioned before,
 synthesis tools like Yosys take the design description from the source files
@@ -593,7 +588,7 @@ tool’s internal representation to the specific primitives used in the
 implementation tools is called technology mapping (or techmapping).</p>
 </section>
 <section id="technology-mapping-for-vpr">
-<h4 id="technology-mapping-for-vpr">Technology mapping for VPR<a class="headerlink" href="#technology-mapping-for-vpr" title="Permalink to this heading">¶</a></h4>
+<h4 id="technology-mapping-for-vpr">Technology mapping for VPR<a class="headerlink" href="#technology-mapping-for-vpr" title="Link to this heading">¶</a></h4>
 <p>As mentioned before, VPR is one of the implementation tools (often referred to
 as Place &amp; Route or P&amp;R tools) used in F4PGA. By default, the F4PGA
 toolchain uses it during bitstream generation for, i.e., Xilinx 7-Series
@@ -616,7 +611,7 @@ buffer types that they can use in designs:</p>
 <p>Nevertheless, the actual chips consist only of the <code class="docutils literal notranslate"><span class="pre">BUFGCTRL</span></code> primitives,
 which are the most universal and can function as other clock buffer
 primitives from the Xilinx manual. Because of that, only one architecture model
-is required for VPR. The rest of the primitives is mapped to this general
+is required for VPR. The rest of the primitives are mapped to this general
 buffer during the techmapping process. The model of <code class="docutils literal notranslate"><span class="pre">BUFGCTRL</span></code> primitive used
 by VPR is called <code class="docutils literal notranslate"><span class="pre">BUFGCTR_VPR</span></code> (More information about the architecture
 modeling in VPR can be found in the <a class="reference external" href="https://docs.verilogtorouting.org/en/latest/arch/">VTR FPGA Architecture Description</a>).</p>
@@ -833,16 +828,16 @@ but primarily to match the port declarations and express the logic behind
 the primitive substitution:</p>
 <dl class="verilog module">
 <dt class="sig sig-object verilog" id="verilog-bufg">
-<span class="pre">module</span> <span class="sig-name descname"><span class="pre">BUFG</span></span><span class="p"><span class="pre">(</span></span><span class="pre">output</span> <span class="sig-prename descclassname"><span class="pre">O</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#verilog-bufg" title="Permalink to this definition">¶</a></dt>
+<span class="pre">module</span> <span class="sig-name descname"><span class="pre">BUFG</span></span><span class="p"><span class="pre">(</span></span><span class="pre">output</span> <span class="sig-prename descclassname"><span class="pre">O</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#verilog-bufg" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 <dl class="verilog module">
 <dt class="sig sig-object verilog" id="verilog-bufgctrl">
-<span class="pre">module</span> <span class="sig-name descname"><span class="pre">BUFGCTRL</span></span><span class="p"><span class="pre">(</span></span><span class="pre">output</span> <span class="sig-prename descclassname"><span class="pre">O</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">CE0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">CE1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">IGNORE0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">IGNORE1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">S0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">S1</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#verilog-bufgctrl" title="Permalink to this definition">¶</a></dt>
+<span class="pre">module</span> <span class="sig-name descname"><span class="pre">BUFGCTRL</span></span><span class="p"><span class="pre">(</span></span><span class="pre">output</span> <span class="sig-prename descclassname"><span class="pre">O</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">CE0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">CE1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">I1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">IGNORE0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">IGNORE1</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">S0</span></span><span class="p"><span class="pre">,</span></span> <span class="pre">input</span> <span class="sig-prename descclassname"><span class="pre">S1</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#verilog-bufgctrl" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 </div>
 </section>
 <section id="more-information">
-<h4 id="more-information">More information<a class="headerlink" href="#more-information" title="Permalink to this heading">¶</a></h4>
+<h4 id="more-information">More information<a class="headerlink" href="#more-information" title="Link to this heading">¶</a></h4>
 <p>Additional information about Yosys can be found on the <a class="reference external" href="https://yosyshq.net/yosys/">Yosys Project Website</a> , or in <a class="reference external" href="https://yosyshq.net/yosys/files/yosys_manual.pdf">Yosys Manual</a>. You can also compile
 one of the tests described in Getting Started section and watch the log file
 to understand which operations are performed by Yosys.</p>
@@ -850,16 +845,16 @@ to understand which operations are performed by Yosys.</p>
 </section>
 </section>
 <section id="place-route">
-<h2 id="place-route">Place &amp; Route<a class="headerlink" href="#place-route" title="Permalink to this heading">¶</a></h2>
+<h2 id="place-route">Place &amp; Route<a class="headerlink" href="#place-route" title="Link to this heading">¶</a></h2>
 <p>The F4PGA Project uses two different tools for the PnR process - <code class="docutils literal notranslate"><span class="pre">nextpnr</span></code> and <code class="docutils literal notranslate"><span class="pre">Versatile</span> <span class="pre">Place</span> <span class="pre">and</span> <span class="pre">Route</span></code> (VPR).
 Both of them write their final result to a file in the <code class="docutils literal notranslate"><span class="pre">.fasm</span></code> format.</p>
 <section id="vpr">
-<h3 id="vpr">VPR<a class="headerlink" href="#vpr" title="Permalink to this heading">¶</a></h3>
+<h3 id="vpr">VPR<a class="headerlink" href="#vpr" title="Link to this heading">¶</a></h3>
 <p>See <a class="reference external" href="https://docs.verilogtorouting.org/en/latest/vpr/">VPR ➚</a>.</p>
 </section>
 <section id="nextpnr">
-<h3 id="nextpnr">nextpnr<a class="headerlink" href="#nextpnr" title="Permalink to this heading">¶</a></h3>
-<p>See <a class="reference external" href="https://github.com/f4pga/nextpnr">nextpnr ➚</a>.</p>
+<h3 id="nextpnr">nextpnr<a class="headerlink" href="#nextpnr" title="Link to this heading">¶</a></h3>
+<p>See <a class="extlink-gh reference external" href="https://github.com/f4pga/nextpnr">nextpnr ➚</a>.</p>
 </section>
 </section>
 </section>
@@ -921,7 +916,7 @@ Both of them write their final result to a file in the <code class="docutils lit
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

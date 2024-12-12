@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Developer’s notes &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Understanding the (deprecated) flow" href="Deprecated.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -465,9 +460,9 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="developer-s-notes">
-<h1 id="f4pga-devnotes--page-root">Developer’s notes<a class="headerlink" href="#f4pga-devnotes--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="f4pga-devnotes--page-root">Developer’s notes<a class="headerlink" href="#f4pga-devnotes--page-root" title="Link to this heading">¶</a></h1>
 <section id="last-update-2022-05-06">
-<h2 id="last-update-2022-05-06">Last update: 2022-05-06<a class="headerlink" href="#last-update-2022-05-06" title="Permalink to this heading">¶</a></h2>
+<h2 id="last-update-2022-05-06">Last update: 2022-05-06<a class="headerlink" href="#last-update-2022-05-06" title="Link to this heading">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>These notes are provided as-is and they shouldn’t be treated as a full-blown accurate
@@ -477,7 +472,7 @@ development of <em>f4pga</em>. These are not updated regularly.</p>
 </div>
 </section>
 <section id="project-s-structure">
-<h2 id="project-s-structure">Project’s structure<a class="headerlink" href="#project-s-structure" title="Permalink to this heading">¶</a></h2>
+<h2 id="project-s-structure">Project’s structure<a class="headerlink" href="#project-s-structure" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> contains the logic and entry point of the build system</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">argparser.py</span></code> contains boring code for CLI interface</p></li>
@@ -501,9 +496,9 @@ This is due to the project being written back when <em>F4PGA</em> was called <em
 </div>
 </section>
 <section id="different-subsystems-and-where-to-find-them">
-<h2 id="different-subsystems-and-where-to-find-them">Different subsystems and where to find them?<a class="headerlink" href="#different-subsystems-and-where-to-find-them" title="Permalink to this heading">¶</a></h2>
+<h2 id="different-subsystems-and-where-to-find-them">Different subsystems and where to find them?<a class="headerlink" href="#different-subsystems-and-where-to-find-them" title="Link to this heading">¶</a></h2>
 <section id="building-and-dependency-resolution">
-<h3 id="building-and-dependency-resolution">Building and dependency resolution<a class="headerlink" href="#building-and-dependency-resolution" title="Permalink to this heading">¶</a></h3>
+<h3 id="building-and-dependency-resolution">Building and dependency resolution<a class="headerlink" href="#building-and-dependency-resolution" title="Link to this heading">¶</a></h3>
 <p>All the code regarding dependency resolution is located in <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file.
 Take a look at the <code class="docutils literal notranslate"><span class="pre">Flow</span></code> class.</p>
 <p>Most of the work is done in <code class="docutils literal notranslate"><span class="pre">Flow._resolve_dependencies</span></code> method. Basically it
@@ -516,7 +511,7 @@ their inputs are going to be satisfied, checks if dependencies were modified, et
 <em>DFS</em> approach to invoke modules and check their inputs and outputs.</p>
 </section>
 <section id="modification-tracking">
-<h3 id="modification-tracking">Modification tracking<a class="headerlink" href="#modification-tracking" title="Permalink to this heading">¶</a></h3>
+<h3 id="modification-tracking">Modification tracking<a class="headerlink" href="#modification-tracking" title="Link to this heading">¶</a></h3>
 <p>Modification tracking is done by taking, comparing and keeping track of <code class="docutils literal notranslate"><span class="pre">adler32</span></code>
 hashes of all dependencies. Each dependency has a set of hashes associated with it.
 The reason for having multiple hashes is that a dependency may have multiple
@@ -528,7 +523,7 @@ to individual stages.</p>
 defined in <code class="docutils literal notranslate"><span class="pre">cache.py</span></code> file. <code class="docutils literal notranslate"><span class="pre">F4Cache</span></code> is used mostly inside <code class="docutils literal notranslate"><span class="pre">Flow</span></code>’s methods.</p>
 </section>
 <section id="internal-environmental-variable-system">
-<h3 id="internal-environmental-variable-system">Internal environmental variable system<a class="headerlink" href="#internal-environmental-variable-system" title="Permalink to this heading">¶</a></h3>
+<h3 id="internal-environmental-variable-system">Internal environmental variable system<a class="headerlink" href="#internal-environmental-variable-system" title="Link to this heading">¶</a></h3>
 <p><em>f4pga</em> exposes some data to the user as well as reads some using internal
 environmental variables. These can be referenced by users in
 <em>platform flow definitions</em> and <em>project flow configurations</em> using the
@@ -538,12 +533,12 @@ environmental variables. These can be referenced by users in
 inside the <code class="docutils literal notranslate"><span class="pre">common</span></code> module.</p>
 </section>
 <section id="installation">
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h3>
+<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h3>
 <p>Check <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>.</p>
 </section>
 </section>
 <section id="todo">
-<h2 id="todo">TODO:<a class="headerlink" href="#todo" title="Permalink to this heading">¶</a></h2>
+<h2 id="todo">TODO:<a class="headerlink" href="#todo" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>Define a clear specification for entries in <em>platform flow definitions</em> and
 <em>platform flow configurations</em>. Which environmental variables can be accessed
@@ -559,7 +554,7 @@ path. Otherwise the path is unknown.</p></li>
 <li><p>(<em>suggestion</em>) Generate platform definitions using CMake.</p></li>
 </ul>
 <section id="out-of-the-current-scope">
-<h3 id="out-of-the-current-scope">Out of the current scope<a class="headerlink" href="#out-of-the-current-scope" title="Permalink to this heading">¶</a></h3>
+<h3 id="out-of-the-current-scope">Out of the current scope<a class="headerlink" href="#out-of-the-current-scope" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Change interfaces of some internal python scripts. This could lead to possibly
 merging some modules for XC7 and Quicklogic into one common module.</p></li>
@@ -625,7 +620,7 @@ merging some modules for XC7 and Quicklogic into one common module.</p></li>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

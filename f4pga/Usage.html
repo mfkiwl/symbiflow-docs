@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Usage &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Modules" href="modules/index.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -501,9 +496,9 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="usage">
-<h1 id="f4pga-usage--page-root">Usage<a class="headerlink" href="#f4pga-usage--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="f4pga-usage--page-root">Usage<a class="headerlink" href="#f4pga-usage--page-root" title="Link to this heading">¶</a></h1>
 <section id="getting-started">
-<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h2>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h2>
 <p>To use <code class="docutils literal notranslate"><span class="pre">f4pga</span></code> you need a working Python 3 installation which should be included as a part of the conda virtual
 environment set up during F4PGA installation.
 <code class="docutils literal notranslate"><span class="pre">f4pga</span></code> is installed together with F4PGA, regardless of the version of the toolchain.
@@ -523,10 +518,10 @@ Look for a line like this one on stdout:</p>
 </div>
 </section>
 <section id="fundamental-concepts">
-<h2 id="fundamental-concepts">Fundamental concepts<a class="headerlink" href="#fundamental-concepts" title="Permalink to this heading">¶</a></h2>
+<h2 id="fundamental-concepts">Fundamental concepts<a class="headerlink" href="#fundamental-concepts" title="Link to this heading">¶</a></h2>
 <p>If you want to create a new project, it’s highly recommended that you read this section first.</p>
 <section id="f4pga">
-<h3 id="f4pga">f4pga<a class="headerlink" href="#f4pga" title="Permalink to this heading">¶</a></h3>
+<h3 id="f4pga">f4pga<a class="headerlink" href="#f4pga" title="Link to this heading">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">f4pga</span></code> is a modular build system designed to handle various <em>Verilog-to-bitstream</em> flows for FPGAs.
 It works by wrapping the necessary tools in Python, which are called <em>f4pga modules</em>.
 Modules are then referenced in <em>platform flow definition</em> files, together with configuration specific for a given
@@ -544,29 +539,29 @@ Flow definition files for the following platforms are included as a part of <em>
 The purpose of that file is to configure inputs for the flow and override configuration values if necessary.</p>
 </section>
 <section id="modules">
-<h3 id="modules">Modules<a class="headerlink" href="#modules" title="Permalink to this heading">¶</a></h3>
+<h3 id="modules">Modules<a class="headerlink" href="#modules" title="Link to this heading">¶</a></h3>
 <p>A <em>module</em> (also referred to as <em>f4pga module</em> in situations where there might be confusion between arbitrary Python
 <em>modules</em> and f4pga <em>modules</em>) is a Python script that wraps a tool used within the F4PGA ecosystem.
 The main purpose of the wrappers is to provide a unified interface for <code class="docutils literal notranslate"><span class="pre">f4pga</span></code> to use and to configure the tool,
 as well as provide information about files required and produced by the tool.</p>
 </section>
 <section id="dependencies">
-<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading">¶</a></h3>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h3>
 <p>A <em>dependency</em> is any file, directory or a list of such that a <em>module</em> takes as its input or produces on its output.</p>
 <p>Modules specify their dependencies by using symbolic names instead of file paths.
 The files they produce are also given symbolic names and paths which are either set through <em>project flow configuration</em>
 file or derived from the paths of the dependencies taken by the module.</p>
 </section>
 <section id="target">
-<h3 id="target">Target<a class="headerlink" href="#target" title="Permalink to this heading">¶</a></h3>
+<h3 id="target">Target<a class="headerlink" href="#target" title="Link to this heading">¶</a></h3>
 <p><em>Target</em> is a dependency that the user has asked F4PGA to produce.</p>
 </section>
 <section id="flow">
-<h3 id="flow">Flow<a class="headerlink" href="#flow" title="Permalink to this heading">¶</a></h3>
+<h3 id="flow">Flow<a class="headerlink" href="#flow" title="Link to this heading">¶</a></h3>
 <p>A <em>flow</em> is set of <em>modules</em> executed in a right order to produce a <em>target</em>.</p>
 </section>
 <section id="f4cache">
-<h3 id="f4cache">.f4cache<a class="headerlink" href="#f4cache" title="Permalink to this heading">¶</a></h3>
+<h3 id="f4cache">.f4cache<a class="headerlink" href="#f4cache" title="Link to this heading">¶</a></h3>
 <p>All <em>dependencies</em> are tracked by a modification tracking system which stores hashes of the files
 (directories get always <code class="docutils literal notranslate"><span class="pre">'0'</span></code> hash) in <code class="docutils literal notranslate"><span class="pre">.f4cache</span></code> file in the root of the project.
 When F4PGA constructs a <em>flow</em>, it will try to omit execution of modules which would receive the same data on their
@@ -576,7 +571,7 @@ changed, ie. <em>modules</em> are deterministic. This is might be not true for s
 a stage, there’s a <code class="docutils literal notranslate"><span class="pre">--nocache</span></code> option that treats the <code class="docutils literal notranslate"><span class="pre">.f4cache</span></code> file as if it was empty.</p>
 </section>
 <section id="resolution">
-<h3 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permalink to this heading">¶</a></h3>
+<h3 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Link to this heading">¶</a></h3>
 <p>A <em>dependency</em> is said to be <em>resolved</em> if it meets one of the following criteria:</p>
 <ul class="simple">
 <li><p>it exists on persistent storage and its hash matches the one stored in .f4cache</p></li>
@@ -585,7 +580,7 @@ question.</p></li>
 </ul>
 </section>
 <section id="platform-s-flow-definition">
-<h3 id="platform-s-flow-definition">Platform’s flow definition<a class="headerlink" href="#platform-s-flow-definition" title="Permalink to this heading">¶</a></h3>
+<h3 id="platform-s-flow-definition">Platform’s flow definition<a class="headerlink" href="#platform-s-flow-definition" title="Link to this heading">¶</a></h3>
 <p><em>Platform flow definition</em> is a piece of data describing a space of flows for a given platform, serialized into a <em>JSON</em>.
 It’s stored in a file that’s named after the device’s name under <code class="docutils literal notranslate"><span class="pre">f4pga/platforms</span></code>.</p>
 <p><em>Platform flow definition</em> contains a list of modules available for constructing flows and defines a set of values which
@@ -598,7 +593,7 @@ module with renameable outputs.</p>
 provide a list of source files needed in a <em>flow</em>.</p>
 </section>
 <section id="project-s-flow-configuration">
-<h3 id="project-s-flow-configuration">Project’s flow configuration<a class="headerlink" href="#project-s-flow-configuration" title="Permalink to this heading">¶</a></h3>
+<h3 id="project-s-flow-configuration">Project’s flow configuration<a class="headerlink" href="#project-s-flow-configuration" title="Link to this heading">¶</a></h3>
 <p>Similarly to <em>platform flow definition</em>, <em>Projects flow configuration</em> is a <em>JSON</em> that is used to configure <em>modules</em>. There are however a couple differences here and there.</p>
 <ul class="simple">
 <li><p>The most obvious one is that this file is unique for a project and is provided by the user of <code class="docutils literal notranslate"><span class="pre">f4pga</span></code>.</p></li>
@@ -612,9 +607,9 @@ provide a list of source files needed in a <em>flow</em>.</p>
 </section>
 </section>
 <section id="build-a-target">
-<h2 id="build-a-target">Build a target<a class="headerlink" href="#build-a-target" title="Permalink to this heading">¶</a></h2>
+<h2 id="build-a-target">Build a target<a class="headerlink" href="#build-a-target" title="Link to this heading">¶</a></h2>
 <section id="using-flow-configuration-file">
-<h3 id="using-flow-configuration-file">Using flow configuration file<a class="headerlink" href="#using-flow-configuration-file" title="Permalink to this heading">¶</a></h3>
+<h3 id="using-flow-configuration-file">Using flow configuration file<a class="headerlink" href="#using-flow-configuration-file" title="Link to this heading">¶</a></h3>
 <p>To build a <em>target</em> <code class="docutils literal notranslate"><span class="pre">target_name</span></code>, use the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>f4pga<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>flow.json<span class="w"> </span>-p<span class="w"> </span>platform_device_name<span class="w"> </span>-t<span class="w"> </span>target_name
 </pre></div>
@@ -663,7 +658,7 @@ chosen platform. This will default to the <code class="docutils literal notransl
 </div>
 </section>
 <section id="using-command-line-interface">
-<h3 id="using-command-line-interface">Using Command-Line Interface<a class="headerlink" href="#using-command-line-interface" title="Permalink to this heading">¶</a></h3>
+<h3 id="using-command-line-interface">Using Command-Line Interface<a class="headerlink" href="#using-command-line-interface" title="Link to this heading">¶</a></h3>
 <p>Alternatively you can use CLI to pass the configuration without creating a flow file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ f4pga build -p XC7A35TCSG324-1 -Dsources=[counter.v] -Dxdc=[arty.xdc] -Dsynth_log=synth.log -Dpack_log=pack.log -Dbuild_dir=build/arty_35 -Vtop=top -t bitstream
 </pre></div>
@@ -684,13 +679,13 @@ as strings unless the follow one of the following format:</p>
 <p>Nesting structures is currently unsupported in CLI.</p>
 </section>
 <section id="pretend-mode">
-<h3 id="pretend-mode">Pretend mode<a class="headerlink" href="#pretend-mode" title="Permalink to this heading">¶</a></h3>
+<h3 id="pretend-mode">Pretend mode<a class="headerlink" href="#pretend-mode" title="Link to this heading">¶</a></h3>
 <p>You can also add a <code class="docutils literal notranslate"><span class="pre">--pretend</span></code> (<code class="docutils literal notranslate"><span class="pre">-P</span></code>) option if you just want to see the results of dependency resolution for a
 specified target without building it.
 This is useful when you just want to know what files will be generated and where will they be stored.</p>
 </section>
 <section id="info-mode">
-<h3 id="info-mode">Info mode<a class="headerlink" href="#info-mode" title="Permalink to this heading">¶</a></h3>
+<h3 id="info-mode">Info mode<a class="headerlink" href="#info-mode" title="Link to this heading">¶</a></h3>
 <p>Modules have the ability to include description to the dependencies they produce.</p>
 <p>Running <code class="docutils literal notranslate"><span class="pre">f4pga</span></code> with <code class="docutils literal notranslate"><span class="pre">--info</span></code> (<code class="docutils literal notranslate"><span class="pre">-i</span></code>) flag allows you to see descriptions of these dependencies.
 This option doesn’t require a target to be specified, but you still have to provide a flow configuration and platform
@@ -723,7 +718,7 @@ name.</p>
 </div>
 </section>
 <section id="summary-of-global-options">
-<h3 id="summary-of-global-options">Summary of global options<a class="headerlink" href="#summary-of-global-options" title="Permalink to this heading">¶</a></h3>
+<h3 id="summary-of-global-options">Summary of global options<a class="headerlink" href="#summary-of-global-options" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>long</p></th>
@@ -747,7 +742,7 @@ name.</p>
 </table>
 </section>
 <section id="summary-of-all-available-sub-commands">
-<h3 id="summary-of-all-available-sub-commands">Summary of all available sub-commands<a class="headerlink" href="#summary-of-all-available-sub-commands" title="Permalink to this heading">¶</a></h3>
+<h3 id="summary-of-all-available-sub-commands">Summary of all available sub-commands<a class="headerlink" href="#summary-of-all-available-sub-commands" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>name</p></th>
@@ -765,7 +760,7 @@ name.</p>
 </table>
 </section>
 <section id="summary-of-all-options-available-for-build-sub-command">
-<h3 id="summary-of-all-options-available-for-build-sub-command">Summary of all options available for <code class="docutils literal notranslate"><span class="pre">build</span></code> sub-command<a class="headerlink" href="#summary-of-all-options-available-for-build-sub-command" title="Permalink to this heading">¶</a></h3>
+<h3 id="summary-of-all-options-available-for-build-sub-command">Summary of all options available for <code class="docutils literal notranslate"><span class="pre">build</span></code> sub-command<a class="headerlink" href="#summary-of-all-options-available-for-build-sub-command" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>long</p></th>
@@ -824,7 +819,7 @@ name.</p>
 </table>
 </section>
 <section id="summary-of-all-options-available-for-showd-sub-command">
-<h3 id="summary-of-all-options-available-for-showd-sub-command">Summary of all options available for <code class="docutils literal notranslate"><span class="pre">showd</span></code> sub-command<a class="headerlink" href="#summary-of-all-options-available-for-showd-sub-command" title="Permalink to this heading">¶</a></h3>
+<h3 id="summary-of-all-options-available-for-showd-sub-command">Summary of all options available for <code class="docutils literal notranslate"><span class="pre">showd</span></code> sub-command<a class="headerlink" href="#summary-of-all-options-available-for-showd-sub-command" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>long</p></th>
@@ -853,7 +848,7 @@ name.</p>
 </table>
 </section>
 <section id="dependency-resolution-display">
-<h3 id="dependency-resolution-display">Dependency resolution display<a class="headerlink" href="#dependency-resolution-display" title="Permalink to this heading">¶</a></h3>
+<h3 id="dependency-resolution-display">Dependency resolution display<a class="headerlink" href="#dependency-resolution-display" title="Link to this heading">¶</a></h3>
 <p>F4PGA displays some information about dependencies when requesting a target.</p>
 <p>Here’s an example of a possible output when trying to build <code class="docutils literal notranslate"><span class="pre">bitstream</span></code> target (use <code class="docutils literal notranslate"><span class="pre">-P</span></code>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">F4PGA</span> <span class="n">Build</span> <span class="n">System</span>
@@ -918,11 +913,11 @@ This causes a bunch of other dependencies to be rebuilt (”<strong>R</strong>�
 </section>
 </section>
 <section id="common-targets-and-values">
-<h2 id="common-targets-and-values">Common targets and values<a class="headerlink" href="#common-targets-and-values" title="Permalink to this heading">¶</a></h2>
+<h2 id="common-targets-and-values">Common targets and values<a class="headerlink" href="#common-targets-and-values" title="Link to this heading">¶</a></h2>
 <p>Targets and values are named with some conventions.
 Below are lists of the target and value names along with their meanings.</p>
 <section id="need-to-be-provided-by-the-user">
-<h3 id="need-to-be-provided-by-the-user">Need to be provided by the user<a class="headerlink" href="#need-to-be-provided-by-the-user" title="Permalink to this heading">¶</a></h3>
+<h3 id="need-to-be-provided-by-the-user">Need to be provided by the user<a class="headerlink" href="#need-to-be-provided-by-the-user" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>Target name</p></th>
@@ -951,7 +946,7 @@ Below are lists of the target and value names along with their meanings.</p>
 </table>
 </section>
 <section id="available-in-most-flows">
-<h3 id="available-in-most-flows">Available in most flows<a class="headerlink" href="#available-in-most-flows" title="Permalink to this heading">¶</a></h3>
+<h3 id="available-in-most-flows">Available in most flows<a class="headerlink" href="#available-in-most-flows" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>Target name</p></th>
@@ -988,7 +983,7 @@ Below are lists of the target and value names along with their meanings.</p>
 </table>
 </section>
 <section id="built-in-values">
-<h3 id="built-in-values">Built-in values<a class="headerlink" href="#built-in-values" title="Permalink to this heading">¶</a></h3>
+<h3 id="built-in-values">Built-in values<a class="headerlink" href="#built-in-values" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>Value name</p></th>
@@ -1017,7 +1012,7 @@ Below are lists of the target and value names along with their meanings.</p>
 </table>
 </section>
 <section id="used-in-flow-definitions">
-<h3 id="used-in-flow-definitions">Used in flow definitions<a class="headerlink" href="#used-in-flow-definitions" title="Permalink to this heading">¶</a></h3>
+<h3 id="used-in-flow-definitions">Used in flow definitions<a class="headerlink" href="#used-in-flow-definitions" title="Link to this heading">¶</a></h3>
 <table>
 <thead>
 <tr class="row-odd"><th class="head"><p>Value name</p></th>
@@ -1113,7 +1108,7 @@ Below are lists of the target and value names along with their meanings.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

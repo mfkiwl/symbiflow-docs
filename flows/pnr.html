@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Place &amp; Route &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Bitstream translation" href="bitstream.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -451,7 +446,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="place-route">
-<h1 id="flows-pnr--page-root">Place &amp; Route<a class="headerlink" href="#flows-pnr--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="flows-pnr--page-root">Place &amp; Route<a class="headerlink" href="#flows-pnr--page-root" title="Link to this heading">¶</a></h1>
 <p>The Synthesis process results in an output containing logical elements
 available on the desired FPGA chip with the specified connections between them.
 However, it does not specify the physical layout of those elements in the
@@ -463,7 +458,7 @@ The working flow of different PnR tools may vary, however, the process presented
 below represents the typical one, adopted by most of these tools. Usually, it
 consists of four steps - packing, placing, routing and analysis.</p>
 <section id="packing">
-<h2 id="packing">Packing<a class="headerlink" href="#packing" title="Permalink to this heading">¶</a></h2>
+<h2 id="packing">Packing<a class="headerlink" href="#packing" title="Link to this heading">¶</a></h2>
 <p>In the first step, the tool collects and analyzes the primitives present
 in the synthesized design (e.g. Flip-Flops, Muxes, Carry-chains, etc), and
 organizes them in clusters, each one belonging to a physical tile of the device.
@@ -471,7 +466,7 @@ The PnR tool makes the best possible decision, based on the FPGA routing
 resources and timings between different points in the chip.</p>
 </section>
 <section id="placing">
-<h2 id="placing">Placing<a class="headerlink" href="#placing" title="Permalink to this heading">¶</a></h2>
+<h2 id="placing">Placing<a class="headerlink" href="#placing" title="Link to this heading">¶</a></h2>
 <p>After having clustered all the various primitives into the physical tiles of the
 device, the tool begins the placement process. This step consists in assigning a
 physical location to every cluster generated in the packing stage. The choice of
@@ -480,7 +475,7 @@ generally, the final goal is to find the best placement that allows the routing
 step to find more optimal solutions.</p>
 </section>
 <section id="routing">
-<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Permalink to this heading">¶</a></h2>
+<h2 id="routing">Routing<a class="headerlink" href="#routing" title="Link to this heading">¶</a></h2>
 <p>Routing is one of the most demanding tasks of the whole process.
 All possible connections between the placed blocks and the information on
 the signals propagation timings, form a complex graph.
@@ -489,7 +484,7 @@ clusters using the information provided in the routing graph. Once all the nets
 have been routed, an output file containing the implemented design is produced.</p>
 </section>
 <section id="analysis">
-<h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">¶</a></h2>
+<h2 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Link to this heading">¶</a></h2>
 <p>This last step usually checks the whole design in terms of timings and power
 consumption.</p>
 </section>
@@ -552,7 +547,7 @@ consumption.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

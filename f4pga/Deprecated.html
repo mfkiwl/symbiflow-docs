@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Understanding the (deprecated) flow &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Changes" href="../development/changes.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -457,7 +452,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="understanding-the-deprecated-flow">
-<span id="understanding"></span><h1 id="f4pga-deprecated--page-root">Understanding the (deprecated) flow<a class="headerlink" href="#f4pga-deprecated--page-root" title="Permalink to this heading">¶</a></h1>
+<span id="understanding"></span><h1 id="f4pga-deprecated--page-root">Understanding the (deprecated) flow<a class="headerlink" href="#f4pga-deprecated--page-root" title="Link to this heading">¶</a></h1>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>This section describes the usage of the now deprecated <code class="docutils literal notranslate"><span class="pre">symbiflow_*</span></code> entrypoints/wrappers.
@@ -479,11 +474,11 @@ the toolchain separate from your design files, you might consider running the to
 commands in a separate directory from your design files.</p>
 </div>
 <section id="synthesis">
-<h2 id="synthesis">Synthesis<a class="headerlink" href="#synthesis" title="Permalink to this heading">¶</a></h2>
+<h2 id="synthesis">Synthesis<a class="headerlink" href="#synthesis" title="Link to this heading">¶</a></h2>
 <p>To synthesize your designs run the <code class="docutils literal notranslate"><span class="pre">symbiflow_synth</span></code> command. The command has the following
 flags:</p>
 <table id="id1">
-<caption><span class="caption-number">Table 1 </span><span class="caption-text">symbiflow_synth</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">symbiflow_synth</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Flag</p></th>
 <th class="head"><p>Argument</p></th>
@@ -526,16 +521,16 @@ named switch_top.eblif, switch_top.net, etc.</p>
 </div>
 </section>
 <section id="place-and-route">
-<h2 id="place-and-route">Place and Route<a class="headerlink" href="#place-and-route" title="Permalink to this heading">¶</a></h2>
+<h2 id="place-and-route">Place and Route<a class="headerlink" href="#place-and-route" title="Link to this heading">¶</a></h2>
 <p>The three steps for implementing a design are internally handled by the open source VPR
 (Versatile Place and Route) tool. For more information go to <a class="reference external" href="https://docs.verilogtorouting.org/en/latest/vpr/">VPR ➚</a>.</p>
 <section id="pack">
-<h3 id="pack">Pack<a class="headerlink" href="#pack" title="Permalink to this heading">¶</a></h3>
+<h3 id="pack">Pack<a class="headerlink" href="#pack" title="Link to this heading">¶</a></h3>
 <p>Packing is run by the <code class="docutils literal notranslate"><span class="pre">symbiflow_pack</span></code> command and generates several files containing
 a pin usage report, a timing report, a log file, and a netlist. The various flags for the
 pack command are as follows:</p>
 <table id="id2">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">symbiflow_pack</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">symbiflow_pack</span><a class="headerlink" href="#id2" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Flag</p></th>
 <th class="head"><p>Argument</p></th>
@@ -561,12 +556,12 @@ from the -d from synthesis (defining the FPGA family).</p>
 </div>
 </section>
 <section id="place">
-<h3 id="place">Place<a class="headerlink" href="#place" title="Permalink to this heading">¶</a></h3>
+<h3 id="place">Place<a class="headerlink" href="#place" title="Link to this heading">¶</a></h3>
 <p>Placement generates several files describing the location of design elements
 as well as a log file. Placement is run using <code class="docutils literal notranslate"><span class="pre">symbiflow_place</span></code> which utilizes
 the following flags:</p>
 <table id="id3">
-<caption><span class="caption-number">Table 3 </span><span class="caption-text">symbiflow_place</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">symbiflow_place</span><a class="headerlink" href="#id3" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Flag</p></th>
 <th class="head"><p>Argument</p></th>
@@ -599,7 +594,7 @@ the following flags:</p>
 </div>
 </section>
 <section id="route">
-<h3 id="route">Route<a class="headerlink" href="#route" title="Permalink to this heading">¶</a></h3>
+<h3 id="route">Route<a class="headerlink" href="#route" title="Link to this heading">¶</a></h3>
 <p>Routing produces several timing reports as well as a post routing netlist and log file.
 <code class="docutils literal notranslate"><span class="pre">symbiflow_route</span></code> uses the -e, -d, and the optional -s flags. The arguments for these flags
 are the same as in the placement step (.eblif, fabric definition, and SDC file path respectively).
@@ -610,13 +605,13 @@ The following is an example:</p>
 </section>
 </section>
 <section id="generating-bitstream">
-<h2 id="generating-bitstream">Generating Bitstream<a class="headerlink" href="#generating-bitstream" title="Permalink to this heading">¶</a></h2>
+<h2 id="generating-bitstream">Generating Bitstream<a class="headerlink" href="#generating-bitstream" title="Link to this heading">¶</a></h2>
 <p>Generating the bitstream consists of two steps. First, run <code class="docutils literal notranslate"><span class="pre">symbiflow_write_fasm</span></code> to generate
 the .fasm file used to create the bitstream. <code class="docutils literal notranslate"><span class="pre">symbiflow_write_fasm</span></code> uses the -e and -d flags
 with the same arguments as the placing and routing steps (.eblif path, and fabric definition).
 Second, run <code class="docutils literal notranslate"><span class="pre">symbiflow_write_bitstream</span></code> which has the following flags:</p>
 <table id="id4">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">symbiflow_write_bitstream</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">symbiflow_write_bitstream</span><a class="headerlink" href="#id4" title="Link to this table">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Flag</p></th>
 <th class="head"><p>Argument</p></th>
@@ -715,7 +710,7 @@ symbiflow_write_bitstream<span class="w"> </span>-d<span class="w"> </span>artix
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Synthesis &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css?v=79c92029" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Place &amp; Route" href="pnr.html" />
@@ -88,8 +84,7 @@
         <a href="../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
@@ -449,14 +444,14 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="synthesis">
-<h1 id="flows-synthesis--page-root">Synthesis<a class="headerlink" href="#flows-synthesis--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="flows-synthesis--page-root">Synthesis<a class="headerlink" href="#flows-synthesis--page-root" title="Link to this heading">¶</a></h1>
 <p>Synthesis is the process of converting input Verilog file into a netlist,
 which describes the connections between different block available on the
 desired FPGA chip. However, it is worth to notice that these are only
 logical connections. So the synthesized model is only a draft of the final
 design, made with the use of available resources.</p>
 <section id="rtl-generation">
-<h2 id="rtl-generation">RTL Generation<a class="headerlink" href="#rtl-generation" title="Permalink to this heading">¶</a></h2>
+<h2 id="rtl-generation">RTL Generation<a class="headerlink" href="#rtl-generation" title="Link to this heading">¶</a></h2>
 <p>the input Verilog file is often really complicated. Usually it is  written in
 a way that it is hard to distinguish the digital circuit standing behind
 the implemented functionality. Designers often use a so-called
@@ -477,7 +472,7 @@ demands additional simulations between mentioned steps to prove that the input
 design is equivalent to its simplified form.</p>
 </section>
 <section id="technology-mapping">
-<h2 id="technology-mapping">Technology mapping<a class="headerlink" href="#technology-mapping" title="Permalink to this heading">¶</a></h2>
+<h2 id="technology-mapping">Technology mapping<a class="headerlink" href="#technology-mapping" title="Link to this heading">¶</a></h2>
 <p>FPGAs from different architectures may have different architecture. For example,
 they may contain some complicated functional blocks (i.e. RAM, DSP blocks)
 and even some of the basic blocks like LUT tables and flip-flops may vary
@@ -490,7 +485,7 @@ The vendor-specific definitions of these blocks are often located
 in a separate library.</p>
 </section>
 <section id="optimization">
-<h2 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Permalink to this heading">¶</a></h2>
+<h2 id="optimization">Optimization<a class="headerlink" href="#optimization" title="Link to this heading">¶</a></h2>
 <p>Optimization is the key factor that allows to better utilize resources
 of an FPGA. There are some universal situations in which the design
 can be optimized, for example by substituting a bunch of logic gates
@@ -557,7 +552,7 @@ As a result, optimization is an integral part of most of the synthesis steps.</p
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

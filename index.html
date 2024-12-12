@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>FOSS Flows For FPGA &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/material.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="_static/material.css?v=79c92029" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="_static/favicon.svg"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting started" href="getting-started.html" />
@@ -87,8 +83,7 @@
         <a href="#" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -188,7 +183,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="#" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="#"
@@ -444,53 +439,54 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="foss-flows-for-fpga">
-<h1 id="index--page-root">FOSS Flows For FPGA<a class="headerlink" href="#index--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="index--page-root">FOSS Flows For FPGA<a class="headerlink" href="#index--page-root" title="Link to this heading">¶</a></h1>
 <p><a class="reference external" href="https://f4pga.org/">F4PGA ➚</a>, which is a Workgroup under the <a class="reference external" href="https://chipsalliance.org">CHIPS Alliance ➚</a>, is an
 Open Source solution for Hardware Description Language (HDL) to Bitstream FPGA synthesis, currently targeting
 Xilinx’s 7-Series, QuickLogic’s EOS-S3, and Lattice’ iCE40 and ECP5 devices.
 Think of it as the GCC of FPGAs.
 The project aims to design tools that are highly extendable and multiplatform.</p>
-<img alt="_images/hero.svg" class="align-center" src="_images/hero.svg"/><p>The elements of the project include (but are not limited to):</p>
+<img alt="_images/hero.svg" class="align-center" src="_images/hero.svg"/>
+<p>The elements of the project include (but are not limited to):</p>
 <ul class="simple">
-<li><p>The F4PGA open source FPGA toolchains for programming FPGAs (formerly known as <a class="reference external" href="https://github.com/https://github.com/SymbiFlow">SymbiFlow ➚</a>):</p>
+<li><p>The F4PGA open source FPGA toolchains for programming FPGAs (formerly known as <a class="extlink-gh reference external" href="https://github.com/https://github.com/SymbiFlow">SymbiFlow ➚</a>):</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/f4pga/tree/main/f4pga">F4PGA Python CLI ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/f4pga-arch-defs">F4PGA Architecture Definitions ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/f4pga-examples">F4PGA Examples ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/yosys-f4pga-plugins">F4PGA Yosys plugins ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/f4pga/tree/main/f4pga">F4PGA Python CLI ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/f4pga-arch-defs">F4PGA Architecture Definitions ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/f4pga-examples">F4PGA Examples ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/yosys-f4pga-plugins">F4PGA Yosys plugins ➚</a></p></li>
 </ul>
 </li>
 <li><p>The FPGA interchange format (an interchange format defined by CHIPS Alliance to enable interoperability between
 different FPGA tools) adopted by the F4PGA toolchain:</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/fpga-interchange-schema">FPGA Interchange schema ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/python-fpga-interchange">FPGA Interchange Python utilities ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/fpga-interchange-tests">FPGA Interchange Test suite ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/fpga-interchange-schema">FPGA Interchange schema ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/python-fpga-interchange">FPGA Interchange Python utilities ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/fpga-interchange-tests">FPGA Interchange Test suite ➚</a></p></li>
 </ul>
 </li>
-<li><p>The <a class="reference external" href="https://github.com/chipsalliance/fpga-tool-perf">FPGA tool performance framework ➚</a> framework for benchmarking
+<li><p>The <a class="extlink-gh reference external" href="https://github.com/chipsalliance/fpga-tool-perf">FPGA tool performance framework ➚</a> framework for benchmarking
 designs against various FPGA tools, and vice versa, over time.</p></li>
 <li><p>FPGA visualisation tools for visual exploration of FPGA bitstream and databases:</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/f4pga-bitstream-viewer">F4PGA bitstream viewer ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/f4pga-database-visualizer">F4PGA database visualizer ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/f4pga-bitstream-viewer">F4PGA bitstream viewer ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/f4pga-database-visualizer">F4PGA database visualizer ➚</a></p></li>
 </ul>
 </li>
 <li><p>Other utilities (FPGA assembly format, documentation and other):</p>
 <ul>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/fasm">F4PGA Assembly (FASM) ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/f4pga-xc-fasm">Xilinx bitstream generation library ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/vtr-xml-utils">Verilog-to-routing XML utilities ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/chipsalliance/python-sdf-timing">SDF format utilities ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/symbiflow-tools-data-manager">F4PGA tools data manager ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/sphinx_symbiflow_theme">F4PGA Sphinx Theme ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/sphinxcontrib-hdl-diagrams">F4PGA Sphinx HDL diagrams ➚</a></p></li>
-<li><p><a class="reference external" href="https://github.com/SymbiFlow/sphinx-verilog-domain">F4PGA Sphinx Verilog domain ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/fasm">F4PGA Assembly (FASM) ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/f4pga-xc-fasm">Xilinx bitstream generation library ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/vtr-xml-utils">Verilog-to-routing XML utilities ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/chipsalliance/python-sdf-timing">SDF format utilities ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/symbiflow-tools-data-manager">F4PGA tools data manager ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/sphinx_symbiflow_theme">F4PGA Sphinx Theme ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/sphinxcontrib-hdl-diagrams">F4PGA Sphinx HDL diagrams ➚</a></p></li>
+<li><p><a class="extlink-gh reference external" href="https://github.com/SymbiFlow/sphinx-verilog-domain">F4PGA Sphinx Verilog domain ➚</a></p></li>
 </ul>
 </li>
 </ul>
 <section id="table-of-contents">
-<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">¶</a></h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">About F4PGA</span></p>
 <ul>
@@ -685,7 +681,7 @@ designs against various FPGA tools, and vice versa, over time.</p></li>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>

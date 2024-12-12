@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -49,15 +48,12 @@
   
   
     <title>Modules &#8212; F4PGA  documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/material.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.svg"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/material.css?v=79c92029" />
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="icon" href="../../_static/favicon.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="fasm" href="fasm.html" />
@@ -88,8 +84,7 @@
         <a href="../../index.html" title="F4PGA  documentation"
            class="md-header-nav__button md-logo">
           
-              <img src="../../_static/logo.svg" height="26"
-                   alt="F4PGA documentation logo">
+            &nbsp;
           
         </a>
       </div>
@@ -189,7 +184,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="../../index.html" title="F4PGA documentation" class="md-nav__button md-logo">
       
-        <img src="../../_static/logo.svg" alt=" logo" width="48" height="48">
+        <img src="../../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../../index.html"
@@ -473,14 +468,14 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="modules">
-<h1 id="f4pga-modules-index--page-root">Modules<a class="headerlink" href="#f4pga-modules-index--page-root" title="Permalink to this heading">¶</a></h1>
+<h1 id="f4pga-modules-index--page-root">Modules<a class="headerlink" href="#f4pga-modules-index--page-root" title="Link to this heading">¶</a></h1>
 <section id="interface">
-<h2 id="interface">Interface<a class="headerlink" href="#interface" title="Permalink to this heading">¶</a></h2>
+<h2 id="interface">Interface<a class="headerlink" href="#interface" title="Link to this heading">¶</a></h2>
 <p>This document contains all the information needed to configure modules for
 your <em><strong>f4pga</strong></em> project as well as some info about the API used to write
 modules.</p>
 <section id="configuration-interface">
-<h3 id="configuration-interface">Configuration interface:<a class="headerlink" href="#configuration-interface" title="Permalink to this heading">¶</a></h3>
+<h3 id="configuration-interface">Configuration interface:<a class="headerlink" href="#configuration-interface" title="Link to this heading">¶</a></h3>
 <p>Modules are configured through an internal API by <em><strong>f4pga</strong></em>.
 The basic requirement for a module script is to expose a class with <code class="docutils literal notranslate"><span class="pre">Module</span></code>
 interface.</p>
@@ -502,7 +497,7 @@ The keys are value’s names and the values can have any type.</p></li>
 </ul>
 </section>
 <section id="platform-level-configuration">
-<h3 id="platform-level-configuration">Platform-level configuration<a class="headerlink" href="#platform-level-configuration" title="Permalink to this heading">¶</a></h3>
+<h3 id="platform-level-configuration">Platform-level configuration<a class="headerlink" href="#platform-level-configuration" title="Link to this heading">¶</a></h3>
 <p>In case of <strong>platform’s flow definition</strong>, a <code class="docutils literal notranslate"><span class="pre">values</span></code> dictionary can be defined
 globally and the values defined there will be passed to every module’s config.</p>
 <p>Those values can be overridden per-module through <code class="docutils literal notranslate"><span class="pre">module_options</span></code> dictionary.</p>
@@ -518,7 +513,7 @@ I/O).</p>
 with f4pga.</p>
 </section>
 <section id="project-level-configuration">
-<h3 id="project-level-configuration">Project-level configuration<a class="headerlink" href="#project-level-configuration" title="Permalink to this heading">¶</a></h3>
+<h3 id="project-level-configuration">Project-level configuration<a class="headerlink" href="#project-level-configuration" title="Link to this heading">¶</a></h3>
 <p>This section describes <strong>project’s flow configuration</strong>.</p>
 <p>Similarly to <strong>platform’s flow definition</strong>, <code class="docutils literal notranslate"><span class="pre">values</span></code> dict can be provided.
 The values provided there will overwrite the values from
@@ -559,7 +554,7 @@ by the user</p></li>
 <p>Those apply only to flow configuration file.</p>
 </section>
 <section id="internal-environmental-variables">
-<h3 id="internal-environmental-variables">Internal environmental variables<a class="headerlink" href="#internal-environmental-variables" title="Permalink to this heading">¶</a></h3>
+<h3 id="internal-environmental-variables">Internal environmental variables<a class="headerlink" href="#internal-environmental-variables" title="Link to this heading">¶</a></h3>
 <p>It’s very useful to be able to refer to some data within
 <strong>platform’s flow definition</strong> and <strong>project’s flow configuration</strong> to
 either avoid redundant definitions or to store and access results of certain operations.
@@ -623,7 +618,7 @@ handy:</p>
 </ul>
 </section>
 <section id="module-class">
-<h3 id="module-class"><code class="docutils literal notranslate"><span class="pre">Module</span></code> class<a class="headerlink" href="#module-class" title="Permalink to this heading">¶</a></h3>
+<h3 id="module-class"><code class="docutils literal notranslate"><span class="pre">Module</span></code> class<a class="headerlink" href="#module-class" title="Link to this heading">¶</a></h3>
 <p>Each module is represented as a class derived from <code class="docutils literal notranslate"><span class="pre">Module</span></code> class.</p>
 <p>The class should implement the following methods:</p>
 <ul class="simple">
@@ -638,14 +633,14 @@ is a dict with optional parameter for the module.</p></li>
 when instantiating a module.</p>
 </section>
 <section id="module-s-execution-modes">
-<h3 id="module-s-execution-modes">Module’s execution modes<a class="headerlink" href="#module-s-execution-modes" title="Permalink to this heading">¶</a></h3>
+<h3 id="module-s-execution-modes">Module’s execution modes<a class="headerlink" href="#module-s-execution-modes" title="Link to this heading">¶</a></h3>
 <p>A module has essentially two execution modes:</p>
 <ul class="simple">
 <li><p><em>mapping</em> mode</p></li>
 <li><p><em>exec</em> mode</p></li>
 </ul>
 <section id="mapping-mode">
-<h4 id="mapping-mode"><em>mapping</em> mode<a class="headerlink" href="#mapping-mode" title="Permalink to this heading">¶</a></h4>
+<h4 id="mapping-mode"><em>mapping</em> mode<a class="headerlink" href="#mapping-mode" title="Link to this heading">¶</a></h4>
 <p>In <em>mapping</em> mode the module is provided with an incomplete configuration which
 includes:</p>
 <ul class="simple">
@@ -665,7 +660,7 @@ can’t be accessed at this stage for the obvious reason as their values are yet
 to be evaluated.</p>
 </section>
 <section id="exec-mode">
-<h4 id="exec-mode"><em>exec</em> mode<a class="headerlink" href="#exec-mode" title="Permalink to this heading">¶</a></h4>
+<h4 id="exec-mode"><em>exec</em> mode<a class="headerlink" href="#exec-mode" title="Link to this heading">¶</a></h4>
 <p>In <em>exec</em> mode the module does the actual work.</p>
 <p>The configuration passed into this mode is full and it includes:</p>
 <ul class="simple">
@@ -683,7 +678,7 @@ described in <code class="docutils literal notranslate"><span class="pre">output
 </section>
 </section>
 <section id="module-initialization-instantiation">
-<h3 id="module-initialization-instantiation">Module initialization/instantiation<a class="headerlink" href="#module-initialization-instantiation" title="Permalink to this heading">¶</a></h3>
+<h3 id="module-initialization-instantiation">Module initialization/instantiation<a class="headerlink" href="#module-initialization-instantiation" title="Link to this heading">¶</a></h3>
 <p>In the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method of module’s class, the following fields should be
 set:</p>
 <ul class="simple">
@@ -695,7 +690,7 @@ by the module.</p></li>
 products. Those entries are optional and can be skipped.</p></li>
 </ul>
 <section id="qualifiers-decorators">
-<h4 id="qualifiers-decorators">Qualifiers/decorators<a class="headerlink" href="#qualifiers-decorators" title="Permalink to this heading">¶</a></h4>
+<h4 id="qualifiers-decorators">Qualifiers/decorators<a class="headerlink" href="#qualifiers-decorators" title="Link to this heading">¶</a></h4>
 <p>By default the presence of all the dependencies and values is mandatory
 (In case of <code class="docutils literal notranslate"><span class="pre">produces</span></code> that means that the module always has to produce the listed
 dependencies). This can be changed by “decorating” a name in one of the following
@@ -724,7 +719,7 @@ is implemented at the moment. It might be removed in the future.</p>
 </section>
 </section>
 <section id="common-modules">
-<h2 id="common-modules">Common modules<a class="headerlink" href="#common-modules" title="Permalink to this heading">¶</a></h2>
+<h2 id="common-modules">Common modules<a class="headerlink" href="#common-modules" title="Link to this heading">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="fasm.html">fasm</a><ul>
@@ -816,7 +811,7 @@ is implemented at the moment. It might be removed in the future.</p>
               
           </div>
             Created using
-            <a href="http://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
              and
             <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>
